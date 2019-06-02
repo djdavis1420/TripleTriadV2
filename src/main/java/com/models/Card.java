@@ -5,6 +5,7 @@ public class Card {
     private String id;
     private String name;
     private String element;
+    private Boolean limited;
     private int topValue;
     private int bottomValue;
     private int leftValue;
@@ -34,6 +35,14 @@ public class Card {
 
     public void setElement(String element) {
         this.element = element;
+    }
+
+    public Boolean getLimited() {
+        return limited;
+    }
+
+    public void setLimited(Boolean limited) {
+        this.limited = limited;
     }
 
     public int getTopValue() {
