@@ -13,6 +13,17 @@ public class Card {
 
     public Card() {}
 
+    public Card(String id, String name, String element, Boolean limited, int topValue, int bottomValue, int leftValue, int rightValue) {
+        this.id = id;
+        this.name = name;
+        this.element = element;
+        this.limited = limited;
+        this.topValue = topValue;
+        this.bottomValue = bottomValue;
+        this.leftValue = leftValue;
+        this.rightValue = rightValue;
+    }
+
     public String getId() {
         return id;
     }
