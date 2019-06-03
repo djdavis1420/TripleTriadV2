@@ -2,87 +2,97 @@ package com.models;
 
 public class Grid {
     
-    private Position topLeft;
-    private Position topCenter;
-    private Position topRight;
-    private Position midLeft;
-    private Position midCenter;
-    private Position midRight;
-    private Position botLeft;
-    private Position botCenter;
-    private Position botRight;
+    private Position upperLeft;
+    private Position upperCenter;
+    private Position upperRight;
+    private Position middleLeft;
+    private Position middleCenter;
+    private Position middleRight;
+    private Position lowerLeft;
+    private Position lowerCenter;
+    private Position lowerRight;
 
-    public Grid() {}
-
-    public Position getTopLeft() {
-        return topLeft;
+    public Grid() {
+        this.upperLeft = new Position("Upper Left");
+        this.upperCenter = new Position("Upper Center");
+        this.upperRight = new Position("Upper Right");
+        this.middleLeft = new Position("Middle Left");
+        this.middleCenter = new Position("Middle Center");
+        this.middleRight = new Position("Middle Right");
+        this.lowerLeft = new Position("Lower Left");
+        this.lowerCenter = new Position("Lower Center");
+        this.lowerRight = new Position("Lower Right");
     }
 
-    public void setTopLeft(Position topLeft) {
-        this.topLeft = topLeft;
+    public Position getUpperLeft() {
+        return upperLeft;
     }
 
-    public Position getTopCenter() {
-        return topCenter;
+    public void setUpperLeft(Position upperLeft) {
+        this.upperLeft = upperLeft;
     }
 
-    public void setTopCenter(Position topCenter) {
-        this.topCenter = topCenter;
+    public Position getUpperCenter() {
+        return upperCenter;
     }
 
-    public Position getTopRight() {
-        return topRight;
+    public void setUpperCenter(Position upperCenter) {
+        this.upperCenter = upperCenter;
     }
 
-    public void setTopRight(Position topRight) {
-        this.topRight = topRight;
+    public Position getUpperRight() {
+        return upperRight;
     }
 
-    public Position getMidLeft() {
-        return midLeft;
+    public void setUpperRight(Position upperRight) {
+        this.upperRight = upperRight;
     }
 
-    public void setMidLeft(Position midLeft) {
-        this.midLeft = midLeft;
+    public Position getMiddleLeft() {
+        return middleLeft;
     }
 
-    public Position getMidCenter() {
-        return midCenter;
+    public void setMiddleLeft(Position middleLeft) {
+        this.middleLeft = middleLeft;
     }
 
-    public void setMidCenter(Position midCenter) {
-        this.midCenter = midCenter;
+    public Position getMiddleCenter() {
+        return middleCenter;
     }
 
-    public Position getMidRight() {
-        return midRight;
+    public void setMiddleCenter(Position middleCenter) {
+        this.middleCenter = middleCenter;
     }
 
-    public void setMidRight(Position midRight) {
-        this.midRight = midRight;
+    public Position getMiddleRight() {
+        return middleRight;
     }
 
-    public Position getBotLeft() {
-        return botLeft;
+    public void setMiddleRight(Position middleRight) {
+        this.middleRight = middleRight;
     }
 
-    public void setBotLeft(Position botLeft) {
-        this.botLeft = botLeft;
+    public Position getLowerLeft() {
+        return lowerLeft;
     }
 
-    public Position getBotCenter() {
-        return botCenter;
+    public void setLowerLeft(Position lowerLeft) {
+        this.lowerLeft = lowerLeft;
     }
 
-    public void setBotCenter(Position botCenter) {
-        this.botCenter = botCenter;
+    public Position getLowerCenter() {
+        return lowerCenter;
     }
 
-    public Position getBotRight() {
-        return botRight;
+    public void setLowerCenter(Position lowerCenter) {
+        this.lowerCenter = lowerCenter;
     }
 
-    public void setBotRight(Position botRight) {
-        this.botRight = botRight;
+    public Position getLowerRight() {
+        return lowerRight;
+    }
+
+    public void setLowerRight(Position lowerRight) {
+        this.lowerRight = lowerRight;
     }
 }
