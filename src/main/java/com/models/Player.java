@@ -5,12 +5,21 @@ import java.util.UUID;
 
 public class Player {
 
+    private String username;
     private UUID playerID;
     private UUID deckID;
-    private String firstName;
+    private List<Card> deck;
     private List<Card> hand;
 
     public Player() {}
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public UUID getPlayerID() {
         return playerID;
@@ -28,12 +37,12 @@ public class Player {
         this.deckID = deckID;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public List<Card> getDeck() {
+        return deck;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setDeck(List<Card> deck) {
+        this.deck = deck;
     }
 
     public List<Card> getHand() {
