@@ -106,4 +106,15 @@ public class GridServiceTest {
         assertEquals(card, actual.getLowerCenter().getCard());
         assertEquals(name, actual.getLowerCenter().getName());
     }
+
+    @Test
+    public void placeCard_shouldPlaceCardOnGridAtLowerRightPosition(){
+        Card card = new Card();
+        String name = "Lower Right";
+
+        Grid actual = gridService.placeCard(grid, card, PositionEnum.LOWER_RIGHT);
+
+        assertEquals(card, actual.getLowerRight().getCard());
+        assertEquals(name, actual.getLowerRight().getName());
+    }
 }

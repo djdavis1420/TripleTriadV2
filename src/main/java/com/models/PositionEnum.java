@@ -9,6 +9,7 @@ public enum PositionEnum {
     MIDDLE_CENTER,
     MIDDLE_RIGHT,
     LOWER_LEFT,
-    LOWER_CENTER;
+    LOWER_CENTER,
+    LOWER_RIGHT;
 
 }

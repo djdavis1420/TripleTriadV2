@@ -33,6 +33,9 @@ public class GridService {
             case LOWER_CENTER:
                 grid.getLowerCenter().setName("Lower Center");
                 grid.getLowerCenter().setCard(card);
+            case LOWER_RIGHT:
+                grid.getLowerRight().setName("Lower Right");
+                grid.getLowerRight().setCard(card);
         }
         return grid;
     }
