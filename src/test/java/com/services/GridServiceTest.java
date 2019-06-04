@@ -62,4 +62,15 @@ public class GridServiceTest {
         assertEquals(card, actual.getMiddleLeft().getCard());
         assertEquals(name, actual.getMiddleLeft().getName());
     }
+
+    @Test
+    public void placeCard_shouldPlaceCardOnGridAtMiddleCenterPosition(){
+        Card card = new Card();
+        String name = "Middle Center";
+
+        Grid actual = gridService.placeCard(grid, card, PositionEnum.MIDDLE_CENTER);
+
+        assertEquals(card, actual.getMiddleCenter().getCard());
+        assertEquals(name, actual.getMiddleCenter().getName());
+    }
 }
