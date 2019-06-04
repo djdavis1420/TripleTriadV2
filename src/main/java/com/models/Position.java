@@ -6,9 +6,7 @@ public class Position {
     private String owner;
     private Card card;
 
-    public Position(String name) {
-        this.name = name;
-    }
+    public Position() {}
 
     public String getName() {
         return name;

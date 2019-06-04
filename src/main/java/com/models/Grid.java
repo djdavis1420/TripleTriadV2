@@ -1,7 +1,7 @@
 package com.models;
 
 public class Grid {
-    
+
     private Position upperLeft;
     private Position upperCenter;
     private Position upperRight;
@@ -13,15 +13,15 @@ public class Grid {
     private Position lowerRight;
 
     public Grid() {
-        this.upperLeft = new Position("Upper Left");
-        this.upperCenter = new Position("Upper Center");
-        this.upperRight = new Position("Upper Right");
-        this.middleLeft = new Position("Middle Left");
-        this.middleCenter = new Position("Middle Center");
-        this.middleRight = new Position("Middle Right");
-        this.lowerLeft = new Position("Lower Left");
-        this.lowerCenter = new Position("Lower Center");
-        this.lowerRight = new Position("Lower Right");
+        this.upperLeft = new Position();
+        this.upperCenter = new Position();
+        this.upperRight = new Position();
+        this.middleLeft = new Position();
+        this.middleCenter = new Position();
+        this.middleRight = new Position();
+        this.lowerLeft = new Position();
+        this.lowerCenter = new Position();
+        this.lowerRight = new Position();
     }
 
     public Position getUpperLeft() {
