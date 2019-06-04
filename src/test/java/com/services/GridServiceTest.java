@@ -40,4 +40,15 @@ public class GridServiceTest {
         assertEquals(card, actual.getUpperCenter().getCard());
         assertEquals(name, actual.getUpperCenter().getName());
     }
+
+    @Test
+    public void placeCard_shouldPlaceCardOnGridAtUpperRightPosition(){
+        Card card = new Card();
+        String name = "Upper Right";
+
+        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_RIGHT);
+
+        assertEquals(card, actual.getUpperRight().getCard());
+        assertEquals(name, actual.getUpperRight().getName());
+    }
 }
