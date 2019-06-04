@@ -24,6 +24,9 @@ public class GridService {
             case MIDDLE_CENTER:
                 grid.getMiddleCenter().setName("Middle Center");
                 grid.getMiddleCenter().setCard(card);
+            case MIDDLE_RIGHT:
+                grid.getMiddleRight().setName("Middle Right");
+                grid.getMiddleRight().setCard(card);
         }
         return grid;
     }

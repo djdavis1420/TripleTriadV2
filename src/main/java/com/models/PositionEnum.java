@@ -6,6 +6,7 @@ public enum PositionEnum {
     UPPER_CENTER,
     UPPER_RIGHT,
     MIDDLE_LEFT,
-    MIDDLE_CENTER;
+    MIDDLE_CENTER,
+    MIDDLE_RIGHT;
 
 }
