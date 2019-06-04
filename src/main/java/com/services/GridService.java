@@ -12,6 +12,9 @@ public class GridService {
             case UPPER_LEFT:
                 grid.getUpperLeft().setName("Upper Left");
                 grid.getUpperLeft().setCard(card);
+            case UPPER_CENTER:
+                grid.getUpperCenter().setName("Upper Center");
+                grid.getUpperCenter().setCard(card);
         }
         return grid;
     }
