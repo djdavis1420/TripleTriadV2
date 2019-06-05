@@ -6,7 +6,7 @@ import java.util.List;
 
 public class DecksDatabase {
 
-    public List<Card> getDeckByUsername() {
+    public List<Card> getDeckByUsername(String username) {
         return null;
     }
 }
