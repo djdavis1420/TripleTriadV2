@@ -26,10 +26,9 @@ public class PlayersDatabaseIT {
     @Test
     public void getPlayerByUsername_shouldRetrieveUserWithProvidedUsername() {
         String username = "djdavis1420";
-        String expectedID = "0db791cd-8734-11e9-a3bc-0a002700000d";
 
         Player actual = playersDatabase.getPlayerByUsername(username);
 
-        assertEquals(expectedID, actual.getPlayerID().toString());
+        assertEquals(username, actual.getUsername());
     }
 }
