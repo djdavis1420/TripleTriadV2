@@ -2,6 +2,7 @@ package com.services;
 
 import com.database.DecksDatabase;
 import com.models.Card;
+import com.models.Player;
 
 import java.util.List;
 
@@ -13,8 +14,8 @@ public class DeckService {
         this.database = database;
     }
 
-    public Boolean doesDeckExist(String username) {
-        List<Card> deck = database.getDeckByUsername(username);
+    public Boolean doesDeckExist(Player player) {
+        List<Card> deck = database.getDeckByUsername(player);
         return deck.stream().findAny().isPresent();
     }
 }
