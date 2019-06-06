@@ -18,16 +18,16 @@ public class DeckService {
         this.cardsDatabase = cardsDatabase;
     }
 
-    public Boolean doesDeckExist(Player player) {
-        List<Card> deck = decksDatabase.getDeckByUsername(player);
-        deckCache = deck;
-        return deck.stream().findAny().isPresent();
-    }
-
     public List<Card> generateDeck(Player player) {
         if (!doesDeckExist(player)) {
             return cardsDatabase.getStarterDeck();
         }
         return deckCache;
+    }
+
+    private Boolean doesDeckExist(Player player) {
+        List<Card> deck = decksDatabase.getDeckByUsername(player);
+        deckCache = deck;
+        return deck.stream().findAny().isPresent();
     }
 }

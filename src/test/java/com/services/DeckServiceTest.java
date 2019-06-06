@@ -27,28 +27,6 @@ public class DeckServiceTest {
     }
 
     @Test
-    public void doesDeckExist_shouldReturnFalseWhenPlayerDeckDoesNotExist() {
-        Player player = new Player();
-        List<Card> deck = Collections.emptyList();
-        when(decksDatabase.getDeckByUsername(player)).thenReturn(deck);
-
-        Boolean actual = deckService.doesDeckExist(player);
-
-        assertEquals(false, actual);
-    }
-
-    @Test
-    public void doesDeckExist_shouldReturnTrueWhenPlayerDeckDoesExist() {
-        Player player = new Player();
-        List<Card> deck = Collections.singletonList(new Card());
-        when(decksDatabase.getDeckByUsername(player)).thenReturn(deck);
-
-        Boolean actual = deckService.doesDeckExist(player);
-
-        assertEquals(true, actual);
-    }
-
-    @Test
     public void generateDeck_shouldGenerateStarterDeckWhenDeckDoesNotExist() {
         Player player = new Player();
         List<Card> deck = Collections.singletonList(new Card());
@@ -58,6 +36,7 @@ public class DeckServiceTest {
         List<Card> actual = deckService.generateDeck(player);
 
         assertEquals(deck, actual);
+        verify(cardsDatabase, times(1)).getStarterDeck();
     }
 
     @Test
@@ -69,5 +48,6 @@ public class DeckServiceTest {
         List<Card> actual = deckService.generateDeck(player);
 
         assertEquals(deck, actual);
+        verify(decksDatabase, times(1)).getDeckByUsername(player);
     }
 }
