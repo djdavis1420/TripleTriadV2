@@ -19,15 +19,11 @@ public class DeckService {
     }
 
     public List<Card> generateDeck(Player player) {
-        if (!doesDeckExist(player)) {
-            return cardsDatabase.getStarterDeck();
-        }
-        return deckCache;
+        return (!doesDeckExist(player)) ? cardsDatabase.getStarterDeck() : deckCache;
     }
 
     private Boolean doesDeckExist(Player player) {
-        List<Card> deck = decksDatabase.getDeckByUsername(player);
-        deckCache = deck;
-        return deck.stream().findAny().isPresent();
+        deckCache = decksDatabase.getDeckByUsername(player);
+        return deckCache.stream().findAny().isPresent();
     }
 }
