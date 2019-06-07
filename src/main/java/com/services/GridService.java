@@ -3,7 +3,9 @@ package com.services;
 import com.models.Card;
 import com.models.Grid;
 import com.models.PositionEnum;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GridService {
 
     public Grid placeCard(Grid grid, Card card, PositionEnum positionEnum) {
