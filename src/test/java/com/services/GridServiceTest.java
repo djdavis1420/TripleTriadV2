@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class GridServiceTest {
 
@@ -116,5 +117,15 @@ public class GridServiceTest {
 
         assertEquals(card, actual.getLowerRight().getCard());
         assertEquals(name, actual.getLowerRight().getName());
+    }
+
+    @Test
+    public void placeCard_shouldPlaceCardInOnlyGivenPosition(){
+        Card card = new Card();
+
+        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_LEFT);
+
+        assertEquals(card, actual.getUpperLeft().getCard());
+        assertNull(actual.getLowerRight().getCard());
     }
 }
