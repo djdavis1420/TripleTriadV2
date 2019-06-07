@@ -3,8 +3,9 @@ package com.models;
 public class Position {
 
     private String name;
-    private String owner;
     private Card card;
+    private String originalOwner;
+    private String currentOwner;
 
     public Position() {}
 
@@ -16,19 +17,27 @@ public class Position {
         this.name = name;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
     public Card getCard() {
         return card;
     }
 
     public void setCard(Card card) {
         this.card = card;
+    }
+
+    public String getOriginalOwner() {
+        return originalOwner;
+    }
+
+    public void setOriginalOwner(String originalOwner) {
+        this.originalOwner = originalOwner;
+    }
+
+    public String getCurrentOwner() {
+        return currentOwner;
+    }
+
+    public void setCurrentOwner(String currentOwner) {
+        this.currentOwner = currentOwner;
     }
 }
