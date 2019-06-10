@@ -4,8 +4,8 @@ public class Position {
 
     private String name;
     private Card card;
-    private String originalOwner;
-    private String currentOwner;
+    private Player originalOwner;
+    private Player currentOwner;
 
     public Position() {}
 
@@ -25,19 +25,19 @@ public class Position {
         this.card = card;
     }
 
-    public String getOriginalOwner() {
+    public Player getOriginalOwner() {
         return originalOwner;
     }
 
-    public void setOriginalOwner(String originalOwner) {
+    public void setOriginalOwner(Player originalOwner) {
         this.originalOwner = originalOwner;
     }
 
-    public String getCurrentOwner() {
+    public Player getCurrentOwner() {
         return currentOwner;
     }
 
-    public void setCurrentOwner(String currentOwner) {
+    public void setCurrentOwner(Player currentOwner) {
         this.currentOwner = currentOwner;
     }
 }
