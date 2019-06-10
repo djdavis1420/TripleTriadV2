@@ -1,4 +1,4 @@
-package com.services;
+package com.factories;
 
 import com.models.Card;
 import com.models.Grid;
@@ -9,15 +9,15 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class GridServiceTest {
+public class GridFactoryTest {
 
-    private GridService gridService;
+    private GridFactory gridFactory;
     private Grid grid;
 
     @Before
     public void setup() {
         grid = new Grid();
-        gridService = new GridService();
+        gridFactory = new GridFactory();
     }
 
     @Test
@@ -25,7 +25,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Upper Left";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_LEFT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.UPPER_LEFT);
 
         assertEquals(card, actual.getUpperLeft().getCard());
         assertEquals(name, actual.getUpperLeft().getName());
@@ -36,7 +36,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Upper Center";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_CENTER);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.UPPER_CENTER);
 
         assertEquals(card, actual.getUpperCenter().getCard());
         assertEquals(name, actual.getUpperCenter().getName());
@@ -47,7 +47,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Upper Right";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_RIGHT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.UPPER_RIGHT);
 
         assertEquals(card, actual.getUpperRight().getCard());
         assertEquals(name, actual.getUpperRight().getName());
@@ -58,7 +58,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Middle Left";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.MIDDLE_LEFT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.MIDDLE_LEFT);
 
         assertEquals(card, actual.getMiddleLeft().getCard());
         assertEquals(name, actual.getMiddleLeft().getName());
@@ -69,7 +69,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Middle Center";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.MIDDLE_CENTER);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.MIDDLE_CENTER);
 
         assertEquals(card, actual.getMiddleCenter().getCard());
         assertEquals(name, actual.getMiddleCenter().getName());
@@ -80,7 +80,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Middle Right";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.MIDDLE_RIGHT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.MIDDLE_RIGHT);
 
         assertEquals(card, actual.getMiddleRight().getCard());
         assertEquals(name, actual.getMiddleRight().getName());
@@ -91,7 +91,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Lower Left";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.LOWER_LEFT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.LOWER_LEFT);
 
         assertEquals(card, actual.getLowerLeft().getCard());
         assertEquals(name, actual.getLowerLeft().getName());
@@ -102,7 +102,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Lower Center";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.LOWER_CENTER);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.LOWER_CENTER);
 
         assertEquals(card, actual.getLowerCenter().getCard());
         assertEquals(name, actual.getLowerCenter().getName());
@@ -113,7 +113,7 @@ public class GridServiceTest {
         Card card = new Card();
         String name = "Lower Right";
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.LOWER_RIGHT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.LOWER_RIGHT);
 
         assertEquals(card, actual.getLowerRight().getCard());
         assertEquals(name, actual.getLowerRight().getName());
@@ -123,7 +123,7 @@ public class GridServiceTest {
     public void placeCard_shouldPlaceCardInOnlyGivenPosition(){
         Card card = new Card();
 
-        Grid actual = gridService.placeCard(grid, card, PositionEnum.UPPER_LEFT);
+        Grid actual = gridFactory.placeCard(grid, card, PositionEnum.UPPER_LEFT);
 
         assertEquals(card, actual.getUpperLeft().getCard());
         assertNull(actual.getLowerRight().getCard());

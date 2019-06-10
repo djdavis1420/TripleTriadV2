@@ -1,4 +1,4 @@
-package com.services;
+package com.factories;
 
 import com.models.Card;
 import com.models.Grid;
@@ -6,7 +6,7 @@ import com.models.PositionEnum;
 import org.springframework.stereotype.Component;
 
 @Component
-public class GridService {
+public class GridFactory {
 
     public Grid placeCard(Grid grid, Card card, PositionEnum positionEnum) {
 
