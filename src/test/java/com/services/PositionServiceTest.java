@@ -47,4 +47,19 @@ public class PositionServiceTest {
         assertNotEquals(grid.getMiddleCenter().getCurrentOwner(), grid.getMiddleCenter().getOriginalOwner());
     }
 
+    @Test
+    public void challengeDown_shouldComparePlacedCardBottomValueAgainstExistingCardTopValue() {
+        gridFactory.placeCard(grid, placedCard, PositionEnum.UPPER_CENTER);
+        grid.getUpperCenter().setOriginalOwner(player1);
+        grid.getUpperCenter().setCurrentOwner(player1);
+        gridFactory.placeCard(grid, existingCard, PositionEnum.MIDDLE_CENTER);
+        grid.getMiddleCenter().setOriginalOwner(player2);
+        grid.getMiddleCenter().setCurrentOwner(player2);
+
+        positionService.challengeDown(grid.getUpperCenter(), grid.getMiddleCenter());
+
+        assertEquals(player1, grid.getMiddleCenter().getCurrentOwner());
+        assertNotEquals(grid.getMiddleCenter().getCurrentOwner(), grid.getMiddleCenter().getOriginalOwner());
+    }
+
 }

@@ -18,4 +18,10 @@ public class PositionService {
             existingCardPosition.setCurrentOwner(placedCardPosition.getOriginalOwner());
         }
     }
+
+    public void challengeDown(Position placedCardPosition, Position existingCardPosition) {
+        if (placedCardPosition.getCard().getBottomValue() > existingCardPosition.getCard().getTopValue()) {
+            existingCardPosition.setCurrentOwner(placedCardPosition.getOriginalOwner());
+        }
+    }
 }
